@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import "header";
+@import "https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap";
+@import "https://use.typekit.net/gfe6tag.css";
+
+@mixin main_font {
+  font-family: source-sans-3, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+@mixin detail_font {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1382px;
+  padding-inline: 15px;
+  margin: auto;
+}
+
+.main_banner {
+  padding-bottom: 65px;
+  background-color: #212721;
+
+  .main_text {
+    display: flex;
+    align-items: last baseline;
+
+    p {
+      @include main_font;
+      font-size: 22px;
+      line-height: 26px;
+      color: rgba(214, 209, 202, 0.7);
+
+      span {
+        color: yellow;
+        @include detail_font;
+        font-size: 22px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  h3 {
+    @include main_font;
+    //font-size: clamp(50px,10vw - 1rem ,173px);
+    font-size: 173px;
+    line-height: 173px;
+    color: rgba(214, 209, 202, 1);
+    margin-bottom: 70px;
+
+    &:first-child {
+      margin-right: 75px;
+    }
+
+    &:nth-child(2) {
+      display: flex;
+      justify-content: center;
+      margin-right: 140px;
+    }
+
+    &:last-child {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0;
+    }
+
+    &:last-child::before {
+      content: url("../images/down_scroll.svg");
+      display: block;
+      position: relative;
+      bottom: -45px;
+      right: 25px;
+
+    }
+  }
+
+  button {
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: absolute;
+    border: none;
+    right: 250px;
+    bottom: 200px;
+  }
+}
+
+.whatWeDo_banner {
+  padding: 100px 0 200px;
+  margin: auto;
+.container{
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  .image__ {
+    position: relative;
+    max-width: 600px;
+
+    h4 {
+      //color: rgba(214, 209, 202, 0.8);
+      position: absolute;
+      top: 240px;
+      left: -45px;
+      margin: auto;
+      bottom: 0;
+      right: 0;
+      background-image: linear-gradient(to right,
+              grey 3%,
+              yellow 3% 37%,
+              grey 6%);
+      background-size: 100%;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+
+      @include main_font;
+      font-size: 101px;
+      z-index: 2;
+
+    }
+
+    .photo_whatweDo {
+      display: block;
+      width: 100%;
+    }
+  }
+  .text_whatweDo {
+    max-width: 600px;
+      .whatweDo_title {
+        color: rgba(214, 209, 202, 1);
+        @include main_font;
+        font-size: 50px;
+        font-weight: 700;
+        margin-bottom: 71px;
+      }
+.text_about{
+  display: flex;
+      h5 {
+        color: rgba(214, 209, 202, 1);
+        @include main_font;
+        font-size: 19px;
+      }
+  .text{
+    font-family: 'Source Sans 3';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgba(214, 209, 202, 0.8);
+    max-width: 166px;
+    margin-right: 51px;
+    margin-bottom: 51px;
+  }
+    }
+  }
+}
+}
